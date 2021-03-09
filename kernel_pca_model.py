@@ -20,7 +20,7 @@ class KPCA():
                 K = np.dot(X, X.T)
             elif self.kernel == 'polynomial':
                 K = np.dot(X, X.T) + 1
-                K = K*K*K*K
+                K = K*K
             elif self.kernel == 'log':
                 dists = pdist(X) ** 0.10
                 mat = squareform(dists)
