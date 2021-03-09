@@ -41,7 +41,7 @@ class KPCA():
             # 取出特征值最大的10个对应特征向量
             arg_max = eigvals.argsort()[-10:]
             eigvecs_max = eigvecs[:, arg_max]
-        # 求解提升维度后的座标点对应位置，本例中提升到三维
+        # 求解提升维度后的座标点在各个特征向量上的对应位置，本例中提升到三维，即抽取三个特征向量后处理的值(500个500维的矩阵，点乘500维的三个特征向量)
         X_new = np.dot(K, eigvecs_max)
         for i in range(2):
             # 布尔索引 https://www.jianshu.com/p/743b3bb340f6
