@@ -64,7 +64,7 @@ class KPCA():
 
 
 if __name__ == '__main__':
-    data = pd.read_csv("./ellipse_dataset1.csv")
+    data = pd.read_csv("./ellipse_dataset.csv")
     X = data.loc[:, ["x1", "y1"]]
     X = X.to_numpy()
     y = data.loc[:, ["category"]]
