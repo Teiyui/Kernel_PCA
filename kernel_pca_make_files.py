@@ -12,7 +12,7 @@ ellipse = pd.DataFrame(x1)
 ellipse.columns = ["x1", "y1"]
 ellipse["category"] = y1
 # save data in csv file
-ellipse.to_csv("ellipse_dataset1.csv")
+ellipse.to_csv("ellipse_dataset.csv")
 
 a = ellipse[ellipse["category"] == 0]
 b = ellipse[ellipse["category"] == 1]
